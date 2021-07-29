@@ -23,7 +23,7 @@ function curName(x) {
 	}
 }
 
-let my_sum = parseInt(prompt(""));
+let my_sum = parseInt(prompt("Введите сумму - "));
 if (!isNaN(my_sum)) {
 	// у нас была подобная задача на курсе питона, поэтому решил использовать остаток от деления на 10 т.е. последнее число
 	alert(`Ваша сумма в ${my_sum} ${curName(my_sum % 10)} успешно зачислена `);
