@@ -1,28 +1,38 @@
 'use strict'
 
 /**
- * В зависимости от знаков переменных возвращает результат
- * @param {Number} a 
- * @param {Number} b 
- * @returns {Number} результат функции 
+ * Возвращает сумму параметров функции 
  */
-function my_func(a, b) {
-    if (a > 0 && b > 0) {
-        return a - b;
-    } else if (a < 0 && b < 0) {
-        return a * b;
-    } else if ((a > 0 && b < 0) || (a < 0 && b > 0)) {
-        return a + b;
-    } else {
-        return 0;
-    }
+function sum(x, y) {
+    return x + y;
 }
+
+/**
+ * Возвращает произведение параметров функции 
+ */
+function mult(x, y) {
+    return x * y;
+}
+
+/**
+ * Возвращает разницу параметров функции 
+ */
+function dec(x, y) {
+    return x - y;
+}
+
+/**
+ * Возвращает результат деления параметров функции 
+ */
+function dev(x, y) {
+    return x / y;
+}
+
 // объявим переменные которые используем как аргументы для нашей функции
-let a = 7; 
-let b = -5;
-alert(my_func(a, b));
+let a = 7;
+let b = 5;
 // тестовые примеры для отладки
-console.log(my_func(2, 3));   // -1
-console.log(my_func(-2, -3)); // 6
-console.log(my_func(-2, 3));  // 1
-console.log(my_func(2, -3));  // -1
+console.log(sum(a, b));   // 12
+console.log(mult(a, b));  // 35
+console.log(dec(a, b));   // 2
+console.log(dev(a, b));   // 1.4
