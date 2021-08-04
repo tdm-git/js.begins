@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+
+<body>
+    <script>
+        const products =
+            [
+                {
+                    id: 3,
+                    price: 200,
+                },
+                {
+                    id: 4,
+                    price: 900,
+                },
+                {
+                    id: 1,
+                    price: 1000,
+                },
+            ];
+
+        let pricePercent = 15;
+
+        products.forEach((element) => {
+            element.price = element.price * (100 - pricePercent) / 100;
+            console.log(element.price);
+        })
+    </script>
+</body>
+
+</html>
