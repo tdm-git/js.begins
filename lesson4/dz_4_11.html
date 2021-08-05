@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1.1</title>
+    <p>
+        Сделайте в стиле es5, а затем в стиле es6 (по аналогии из дополнительных видео -> 3 примеры наследования ->
+        типы<br>
+        на es5 и es6), конструктор Product, который принимает параметры name и price, сохраните их как свойства
+        объекта.<br>
+        Также объекты типа Product должны иметь метод make25PercentDiscount, который будет уменьшать цену в объекте
+        на<br>
+        25%. Имейте в виду, что метод make25PercentDiscount не должен быть внутри функции-конструктора, и также не
+        нужно<br>
+        создавать отдельный объект-прототип (как объект transport в уроке).
+    </p>
+</head>
+
+<body>
+    <script>
+        // es 5
+        function Product1(name, price) {
+            this.name = name;
+            this.price = price;
+        }
+
+        Product1.prototype.make25PercentDiscount = function () {
+            this.price *= 0.75;
+            alert('новая цена товара ' + this.name + ' составила - ' + this.price);
+        }
+
+        let mat1 = new Product1('доска сосновая', 100);
+        mat1.make25PercentDiscount();
+
+        // es 6
+        class Product2 {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+
+            make25PercentDiscount() {
+                this.price *= 0.75;
+                alert('новая цена товара ' + this.name + ' составила - ' + this.price);
+            }
+        }
+
+        let mat2 = new Product1('доска берёзовая', 250);
+        mat2.make25PercentDiscount();
+
+    </script>
+</body>
+
+</html>
