@@ -19,6 +19,7 @@
 
 <body>
     <script>
+        'use strict';
         // es 5
         function Product1(name, price) {
             this.name = name;
@@ -42,11 +43,11 @@
 
             make25PercentDiscount() {
                 this.price *= 0.75;
-                alert('новая цена товара ' + this.name + ' составила - ' + this.price);
+                alert('цена товара ' + this.name + ' со скидкой 25% составила - ' + this.price); // другой комментарий
             }
         }
 
-        let mat2 = new Product1('доска берёзовая', 250);
+        let mat2 = new Product2('доска берёзовая', 250);
         mat2.make25PercentDiscount();
 
     </script>
