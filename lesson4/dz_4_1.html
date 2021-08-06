@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task 1</title>
+    <p>
+        Написать функцию, преобразующую число в объект. Передавая на вход число в диапазоне [0, 999],<br>
+        мы должны получить на выходе объект, в котором в соответствующих свойствах описаны разряды числа:<br>
+        - единицы (в свойстве units)<br>
+        - десятки (в свойстве tens)<br>
+        - сотни (в свойстве hundereds)<br>
+        Например, для числа 45 мы должны получить следующий объект:<br>
+        {<br>
+        units: 5, //это единицы<br>
+        tens: 4, //это десятки<br>
+        hundreds: 0, //это сотни<br>
+        }<br>
+        Если число было передано вне [0, 999] диапазона, не целое число или вообще не число,<br>
+        необходимо выдать соответствующее сообщение с помощью console.log и вернуть пустой объект.<br>
+    </p>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        class objNumber {
+            constructor(hundreds, tens, units) {
+                this.units = units;
+                this.tens = tens;
+                this.hundreds = hundreds;
+            }
+        }
+
+        // функция преобразующая числов объект
+        function makeObjFromNumber(x) {
+            // решил сделать контроль ввода в самой функкции
+            if (isNaN(x) || x > 999 || x < 0) {
+                alert('некорректный ввод, требуется ввести число в интервале [0..999]')
+                return new objNumber(0, 0, 0);  // вернем пустой объект
+            }
+            return new objNumber(Math.trunc(x / 100), Math.trunc((x / 10) % 10), x % 10);
+        }
+
+        let user_input = makeObjFromNumber(+prompt('введите число [0..999]'));
+        // пример использования
+        console.log(user_input.units);
+    </script>
+</body>
+
+</html>
