@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <p class="one">параграф 1</p>
     <p>параграф</p>
@@ -16,7 +18,13 @@
     и выведите их в консоль. -->
 
     <script>
-        
+        'use srtict';
+        let one = document.getElementsByClassName('one');
+        console.log(one); // получаем всю коллекцию объектов
+        console.log(one[0]); // поочередно выводим все три элемента
+        console.log(one[1]);
+        console.log(one[2]);
     </script>
 </body>
+
 </html>
