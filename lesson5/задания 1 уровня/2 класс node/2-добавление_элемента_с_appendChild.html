@@ -19,10 +19,10 @@
 
     <script>
         'use srtict';
-        let div = document.querySelector('div');
         let newEL = document.createElement('h3');
         newEL.innerText = "hello world";
-        div.appendChild(newEL);
+        // в одну строку не смог собрать, т.к. создание елемента и присвоение ему текста не хотело работать(
+        document.querySelector('div').appendChild(newEL);
     </script>
 </body>
 
