@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница 1</title>
+</head>
+
+<body>
+    <!-- Задание. Выведите содержимое тега title в консоль. -->
+    <script>
+        'use srtict';
+        let title = document.getElementsByTagName('title');
+        console.log(title[0].innerText);
+        // посомтрел ваш вариант решения, как понимаю они идентичны
+        // попробовал внутрь тега вложить другие, результат остался одинаковым
+        console.log(document.title); // ваш вариант
+    </script>
+</body>
+
+</html>
