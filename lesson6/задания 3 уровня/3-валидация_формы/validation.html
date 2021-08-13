@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
         }
     </style>
 </head>
+
 <body>
     <form>
         <input id="first" type="text"><br>
@@ -36,7 +38,23 @@
      -->
 
     <script>
-        
+        'use strict';
+
+        let formEl = document.querySelector('form');
+        let firstInput = document.querySelector('[id="first"]');
+        let secondInput = document.querySelector('[id="second"]');
+
+        formEl.addEventListener('submit', function (event) {
+            if (firstInput.value == '') {
+                firstInput.style.borderColor = 'red';
+                event.preventDefault();
+            }
+            if (secondInput.value == '') {
+                secondInput.style.borderColor = 'red';
+                event.preventDefault();
+            }
+        });
     </script>
 </body>
+
 </html>
