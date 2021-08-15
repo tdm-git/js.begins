@@ -50,7 +50,7 @@
 
         function addClass(starEL) {
             starEL.classList.add('golden');
-            let previousStar = starEL.previousElementSibling; //  этот момент подсмотрел в решении, остальное было элементарно
+            let previousStar = starEL.previousElementSibling; //  пример из ссылки
             if (previousStar != null) {
                 return addClass(previousStar);
             }
