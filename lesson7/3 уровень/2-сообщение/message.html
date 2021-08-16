@@ -26,7 +26,17 @@
     -->
 
     <script>
-        
+        'use strict';
+
+        let audioElement = new Audio('notification.mp3');
+        let btn = document.querySelector('button');
+        let msg = document.querySelector('.message');
+
+        btn.addEventListener('click', function () {
+            // высота определяется динамически + отступ, в примере -10 px но пришлось увеличить
+            msg.style.transform = `translateY(-${20 + msg.clientHeight}px)`;
+            audioElement.play();
+        });
     </script>
 </body>
 
