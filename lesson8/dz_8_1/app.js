@@ -29,9 +29,3 @@ filterSizeWrap.addEventListener('click', function () {
     filterSizes.classList.toggle('hidden');
 });
 
-let featuredItemEl = document.querySelectorAll('.featuredItem')
-featuredItemEl.forEach(function (ItemEl) {
-    ItemEl.addEventListener('click', function () {
-        alert(ItemEl.childNodes[3].childNodes[5].innerText);
-    });
-});
